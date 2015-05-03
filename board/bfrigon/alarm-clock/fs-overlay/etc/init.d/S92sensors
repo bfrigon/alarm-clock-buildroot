@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Init MCP9804 temperature sensor
+echo jc42 0x1f > /sys/bus/i2c/devices/i2c-0/new_device 
+
+sensors -s
