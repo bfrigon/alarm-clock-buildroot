@@ -1,6 +1,25 @@
 #!/bin/sh
+#
+# Init sensors
+#
 
-# Init MCP9804 temperature sensor
-echo jc42 0x1f > /sys/bus/i2c/devices/i2c-0/new_device 
+case "$1" in
+  start)
+        echo "Initializing sensors..."
+        
+        
+        # Init MCP9804 temperature sensor
+        echo jc42 0x1f > /sys/bus/i2c/devices/i2c-0/new_device 
 
-sensors -s
+        sensors -s
+        ;;
+  stop)
+        ;;
+  restart|reload)
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?
