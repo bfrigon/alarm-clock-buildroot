@@ -71,7 +71,7 @@
             };
 
             i2c1: i2c@f8014000 {
-                status = "okay";
+                status = "disabled";
             };
 
             /* TWD2+TCLK2 hidden behind ethernet, so no i2c2 */
