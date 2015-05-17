@@ -153,6 +153,19 @@
             rtc@fffffeb0 {
                 status = "okay";
             };
+
+
+            spi0: spi@f0000000 {
+                status = "okay";
+                cs-gpios = <&pioA 14 0>, <0>, <0>, <0>;
+
+                device@0 {
+                    compatible = "spidev";
+                    spi-max-frequency = <700000>;
+                    reg = <0>;
+                };
+            };
+            
         };
 
         usb0: ohci@00600000 {
