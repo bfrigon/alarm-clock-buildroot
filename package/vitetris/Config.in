@@ -1,0 +1,6 @@
+config BR2_PACKAGE_VITETRIS
+        bool "vitetris"
+        help
+          vitetris is a terminal-based Tetris clone
+
+          http://www.victornils.net/tetris/
